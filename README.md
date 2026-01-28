@@ -50,7 +50,7 @@ Push-Up Counter Demo is a complete iOS application that demonstrates how to inte
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/PushUpCounterDemo.git
+   git clone https://github.com/quickpose/AI-PushUp-Rep-Counter-Demo-iOS-by-QuickPose
    cd PushUpCounterDemo
    ```
 
@@ -156,7 +156,7 @@ The `WorkoutSession` entity stores:
 
 ## 📸 Screenshots
 
-> Add screenshots of your app here
+> To be added
 
 ## 🤝 Contributing
 
