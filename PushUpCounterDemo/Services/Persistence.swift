@@ -14,15 +14,18 @@ struct PersistenceController {
     static let preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
+        for i in 0..<5 {
+            let workout = WorkoutSession(context: viewContext)
+            workout.id = UUID()
+            workout.date = Date().addingTimeInterval(TimeInterval(-i * 86400))
+            workout.mode = i % 2 == 0 ? "reps" : "time"
+            workout.targetValue = Int32(i % 2 == 0 ? 20 : 60)
+            workout.completedReps = Int32(15 + i * 2)
+            workout.duration = Double(30 + i * 10)
         }
         do {
             try viewContext.save()
         } catch {
-            // Replace this implementation with code to handle the error appropriately.
-            // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
@@ -53,5 +56,38 @@ struct PersistenceController {
             }
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
+    }
+    
+    // MARK: - WorkoutSession CRUD Operations
+    
+    func saveWorkout(mode: String, targetValue: Int, completedReps: Int, duration: Double, averageFormScore: Double? = nil) {
+        let context = container.viewContext
+        let workout = WorkoutSession(context: context)
+        workout.id = UUID()
+        workout.date = Date()
+        workout.mode = mode
+        workout.targetValue = Int32(targetValue)
+        workout.completedReps = Int32(completedReps)
+        workout.duration = duration
+        workout.averageFormScore = averageFormScore ?? 0.0
+        
+        do {
+            try context.save()
+        } catch {
+            let nsError = error as NSError
+            print("Error saving workout: \(nsError), \(nsError.userInfo)")
+        }
+    }
+    
+    func deleteWorkout(_ workout: WorkoutSession) {
+        let context = container.viewContext
+        context.delete(workout)
+        
+        do {
+            try context.save()
+        } catch {
+            let nsError = error as NSError
+            print("Error deleting workout: \(nsError), \(nsError.userInfo)")
+        }
     }
 }

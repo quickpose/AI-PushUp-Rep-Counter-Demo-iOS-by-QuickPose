@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6CE11EDB2F2A1DA3000942CC /* QuickPoseCamera in Frameworks */ = {isa = PBXBuildFile; productRef = 6CE11EDA2F2A1DA3000942CC /* QuickPoseCamera */; };
+		6CE11EDD2F2A1DA3000942CC /* QuickPoseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 6CE11EDC2F2A1DA3000942CC /* QuickPoseCore */; };
+		6CE11EDF2F2A1DA3000942CC /* QuickPoseMP in Frameworks */ = {isa = PBXBuildFile; productRef = 6CE11EDE2F2A1DA3000942CC /* QuickPoseMP */; };
+		6CE11EE12F2A1DA3000942CC /* QuickPoseSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 6CE11EE02F2A1DA3000942CC /* QuickPoseSwiftUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6CE11EC62F2A1D76000942CC /* PushUpCounterDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushUpCounterDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +30,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CE11EDD2F2A1DA3000942CC /* QuickPoseCore in Frameworks */,
+				6CE11EDF2F2A1DA3000942CC /* QuickPoseMP in Frameworks */,
+				6CE11EDB2F2A1DA3000942CC /* QuickPoseCamera in Frameworks */,
+				6CE11EE12F2A1DA3000942CC /* QuickPoseSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +76,10 @@
 			);
 			name = PushUpCounterDemo;
 			packageProductDependencies = (
+				6CE11EDA2F2A1DA3000942CC /* QuickPoseCamera */,
+				6CE11EDC2F2A1DA3000942CC /* QuickPoseCore */,
+				6CE11EDE2F2A1DA3000942CC /* QuickPoseMP */,
+				6CE11EE02F2A1DA3000942CC /* QuickPoseSwiftUI */,
 			);
 			productName = PushUpCounterDemo;
 			productReference = 6CE11EC62F2A1D76000942CC /* PushUpCounterDemo.app */;
@@ -94,6 +109,9 @@
 			);
 			mainGroup = 6CE11EBD2F2A1D76000942CC;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6CE11EC72F2A1D76000942CC /* Products */;
 			projectDirPath = "";
@@ -256,11 +274,13 @@
 				DEVELOPMENT_TEAM = 22W63VGZT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is required to track your push-up form and count reps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -269,12 +289,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ai.quickpose.PushUpCounterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -288,11 +312,13 @@
 				DEVELOPMENT_TEAM = 22W63VGZT5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is required to track your push-up form and count reps";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,12 +327,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ai.quickpose.PushUpCounterDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -332,6 +362,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/quickpose/quickpose-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6CE11EDA2F2A1DA3000942CC /* QuickPoseCamera */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseCamera;
+		};
+		6CE11EDC2F2A1DA3000942CC /* QuickPoseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseCore;
+		};
+		6CE11EDE2F2A1DA3000942CC /* QuickPoseMP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseMP;
+		};
+		6CE11EE02F2A1DA3000942CC /* QuickPoseSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6CE11ED92F2A1DA3000942CC /* XCRemoteSwiftPackageReference "quickpose-ios-sdk" */;
+			productName = QuickPoseSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6CE11EBE2F2A1D76000942CC /* Project object */;
 }
