@@ -1,6 +1,6 @@
 # Push-Up Counter Demo
 
-![Push-Up Counter Demo in action](Pushup Example.gif)
+![Push-Up Counter Demo in action](/gifs/Pushup_Example.gif)
 
 <div align="center">
 
