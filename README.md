@@ -1,5 +1,7 @@
 # Push-Up Counter Demo
 
+![Push-Up Counter Demo in action](Pushup Example.gif)
+
 <div align="center">
 
 A demo iOS app showcasing the **QuickPose SDK** for AI-powered push-up counting using real-time pose estimation.
@@ -23,7 +25,7 @@ Push-Up Counter Demo is a complete iOS application that demonstrates how to inte
 
 ### 🤖 AI-Powered Tracking
 - Real-time pose detection using QuickPose SDK
-- Whole-body skeleton overlay for visual feedback
+- Upper-body skeleton overlay for visual feedback
 - Automatic rep counting with form validation
 - Position detection with bounding box guide
 
@@ -170,7 +172,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
 
-See QuickPose SDK licence (https://https://github.com/quickpose/quickpose-ios-sdk)
+See QuickPose SDK licence (https://github.com/quickpose/quickpose-ios-sdk)
 
 ## 🙏 Acknowledgments
 

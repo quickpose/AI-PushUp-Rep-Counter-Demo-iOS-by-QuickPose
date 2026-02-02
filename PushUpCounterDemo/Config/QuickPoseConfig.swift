@@ -10,5 +10,5 @@ import Foundation
 struct QuickPoseConfig {
     // TODO: Replace with your actual SDK key from https://dev.quickpose.ai
     // SDK Keys are linked to your bundle ID, please check Key before distributing to the App Store.
-    static let sdkKey = "Add your SDK key here"
+    static let sdkKey = "Your SDK Key Here"
 }
